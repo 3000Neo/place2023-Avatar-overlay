@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         r/place Avatar Overlay
 // @namespace    http://tampermonkey.net/
-// @version      3
+// @version      4
 // @description  try to take over the canvas!
 // @author       placeDE Devs
 // @match        https://garlic-bread.reddit.com/embed*
@@ -25,7 +25,7 @@ if (window.top !== window.self) {
 }
 
 function updateImage() {
-    overlayImage.src = imageUrl + "?" + Date.now()
+    overlayImage.src = imageUrl + "?" + Date.now() + "=x"
 }
 
-setInterval(function () {overlayImage.src = imageUrl + "?" + Date.now()}, 30000);
+setInterval(function () {overlayImage.src = imageUrl + "?" + Date.now() + "=x"}, 30000);
