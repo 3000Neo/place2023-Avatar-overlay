@@ -41,7 +41,7 @@ for file in os.listdir(imageFolder):
     if(filename.endswith(".png")):
         tokens = filename.split(",")
 
-        if(len(tokens) < 3):
+        if(len(tokens) != 3):
             continue
 
         xValue = tokens[0]
