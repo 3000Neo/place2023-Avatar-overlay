@@ -13,7 +13,7 @@ python.exe $OverlayUpdateScriptPath
 Write-Host "----- END: Overlay Update -----"
 
 Write-Host "----- GIT: Add -----"
-git.exe "-C" $RepositoryBaseFolderPath "add" "*"
+git.exe "-C" $RepositoryBaseFolderPath "add" "img\\*"
 
 Write-Host "----- GIT: Commit -----"
 git.exe "-C" $RepositoryBaseFolderPath "commit" "-m" $commitMessage
