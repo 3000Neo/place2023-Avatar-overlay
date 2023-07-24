@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         r/place Avatar Overlay
 // @namespace    http://tampermonkey.net/
-// @version      6
+// @version      7
 // @description  try to take over the canvas!
 // @author       placeDE Devs
 // @match        https://garlic-bread.reddit.com/embed*
