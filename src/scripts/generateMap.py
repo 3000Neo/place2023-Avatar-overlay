@@ -19,13 +19,13 @@ def addImageToCanvasCompact(imageFilePath, inputCanvas, xStart, yStart):
 
     for x in range(src_width):
         for y in range(src_height):
-            inputCanvas[(x+xStart+1000), (y+yStart+500)] = input_pixel_map[x,y]
+            inputCanvas[(x+xStart+1500), (y+yStart+1000)] = input_pixel_map[x,y]
 
     return
 
 
-redditWidth = 2000
-redditHeight = 1000
+redditWidth = 2500
+redditHeight = 2000
 
 outputImage = Image.new(mode="RGBA", size=(redditWidth*3, redditHeight*3), color=(0,0,0,0))
 outputImageCompact = Image.new(mode="RGBA", size=(redditWidth, redditHeight), color=(0,0,0,0))
