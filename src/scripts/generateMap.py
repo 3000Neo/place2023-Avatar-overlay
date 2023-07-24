@@ -38,20 +38,27 @@ imageFolder = os.path.join(dirname, '../../img/parts/png')
 
 for file in os.listdir(imageFolder):
     filename = os.fsdecode(file)
+    print("Checking File: " + filename)
     if(filename.endswith(".png")):
         tokens = filename.split(",")
 
         if(len(tokens) != 3):
+            print("Tokens not matching: " + filename)
             continue
 
-        xValue = tokens[0]
-        yValue = tokens[1]
 
-        if(xValue.isdigit() == False | yValue.isdigit() == False):
+        try:
+
+            xValue = int(tokens[0])
+            yValue = int(tokens[1])
+
+        except error:
+            print("Tokens are not numbers: x=" + tokens[0] + " y=" + tokens[1])
             continue
 
-        addImageToCanvas(os.path.join(imageFolder, filename), canvas, int(xValue), int(yValue))
-        addImageToCanvasCompact(os.path.join(imageFolder, filename), canvasCompact, int(xValue), int(yValue))
+        print("Adding to Canvas: " + filename)
+        addImageToCanvas(os.path.join(imageFolder, filename), canvas, xValue, yValue)
+        addImageToCanvasCompact(os.path.join(imageFolder, filename), canvasCompact, xValue, yValue)
 
 outputImage.save(os.path.join(dirname, '../../img/overlay.png'))
 outputImageCompact.save(os.path.join(dirname, '../../img/overlay_compact.png'))
