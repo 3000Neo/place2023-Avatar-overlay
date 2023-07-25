@@ -24,7 +24,7 @@ def addImageToCanvasCompact(imageFilePath, inputCanvas, xStart, yStart):
     return
 
 
-redditWidth = 2500
+redditWidth = 3000
 redditHeight = 2000
 
 outputImage = Image.new(mode="RGBA", size=(redditWidth*3, redditHeight*3), color=(0,0,0,0))

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         r/place Avatar Overlay
 // @namespace    http://tampermonkey.net/
-// @version      7
+// @version      8
 // @description  try to take over the canvas!
 // @author       placeDE Devs
 // @match        https://garlic-bread.reddit.com/embed*
@@ -19,7 +19,7 @@ if (window.top !== window.self) {
         const canvasContainer = document.querySelector("garlic-bread-embed").shadowRoot.querySelector("div.layout").querySelector("garlic-bread-canvas").shadowRoot.querySelector("div.container");
         overlayImage = document.createElement("img");
         updateImage();
-        overlayImage.style = `position: absolute;left: 0;top: 0;image-rendering: pixelated;width: 2500px;height: 2000px;`;
+        overlayImage.style = `position: absolute;left: 0;top: 0;image-rendering: pixelated;width: 3000px;height: 2000px;`;
         canvasContainer.appendChild(overlayImage);
     }, false);
 }
